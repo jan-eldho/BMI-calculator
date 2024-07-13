@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./Assets/img/favi.jpg" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="./Assets/style.css">
+    <style>
+      *{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+</head>
+<body>
+
+<section>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand" img src="">Navbar</a> -->
+    <img src="./Assets/img/header-image.png" class="navbar-brand" height="60px">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">BMI Calculator</a></li>
+          <li class="nav-item"><a class="nav-link" href="#result">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#underrisk">Underweight Risk</a></li>
+          <li class="nav-item"><a class="nav-link" href="#overrisk">Overweight Risk</a></li>
+        
+      </ul>
+    
+  </div>
+  </div>
+</nav>
+
+    </section>
+    <section class="py-5">
+      <div class="container-fluid px-4 px-lg-5">
+          <div class="row justify-content-center" id="result">
+            <h2 style="color: blue; font-size: 25px; font-weight: 600; text-align: center;">Introduction to the body mass index (BMI)</h4>
+              <div class="col-md-1"></div>
+              <div class="col-md-10 text-center">
+                <img src="./Assets/img/index-image.svg" style="align-items: center;" alt="range">
+              </div>
+              <div class="col-md-1"></div>
+            <div class="col-md-1"></div>
+          <div class="col-md-10" >
+            
+              
+            <p>Body Mass Index (BMI) is widely used as an indicator of body fat content. Your weight alone is not sufficient to establish if you are in a healthy weight range. For example, a tall but slender person can weigh more than a short but plump individual. But the former may enjoy better health as long as their weight is suitable for their height. The ideal weight is also likely to differ for men and women of similar heights.</p>
+            <p>How then do you know whether you fall in the healthy weight range or not? Your BMI solves this confusion. It correlates your weight with your height and evaluates whether your weight is appropriate for your stature. You can use a BMI calculator to find out your BMI.</p>
+            <p>Although not an exact measurement of body fat percentage, in most cases, BMI is a reliable tool for establishing risk levels for illnesses, especially ailments related to excess body fat. Many healthcare professionals use BMI to determine effective doses for medicines. Often people with a higher BMI need higher doses. Hence, it is crucial to be aware of your BMI to ensure your overall wellness.
+
+            </p>
+          </div>
+          
+         
+            <div class="col-md-4">
+             
+            </div>
+            <div class=" col-4 mt-3 bg-light" style="
+          border-radius: 30px;
+          border: 2px solid brown;
+          box-shadow: 2px 4px 6px 8px black;
+        ">
+        <h1 class="text-center">BMI Calculator</h1>
+
+        <form class="calculator">
+          <div id="gender ">
+            <label for=""> <h4>Gender:</h4></label>
+            <input type="radio" name="genders">Male<label for=""><i class="fa-solid fa-person fa-2xl"></i></label>
+            <input type="radio" name="genders">Female<label for=""><i class="fa-solid fa-person-dress fa-2xl"></i></label>
+          </div>
+          <div>
+            <label for="weight">Weight (kg)</label>
+            <input type="text" id="weight" class="form-control" placeholder="0">
+          </div>
+
+          <div>
+            <label for="height">Height (cm)</label>
+            <input type="text" id="height" class="form-control" placeholder="0">
+          </div>
+          <div id="exp">
+            <p></p>
+          </div>
+          <div style="align-items: center;">
+            
+            <button type="button" onclick="clr()" class="btn btn-primary">Reset</button>
+           
+            <button type="button" class="btn btn-success" onclick="calculate()">Calculate</button>
+          </div>
+        </form>
+
+        <section class="output mt-5">
+          <div class="row justify-content-center align-items-center">
+
+            <h3>Your BMI is</h3>
+            <p id="bmi" style="justify-content: center;">0</p>
+            <h4 id="ext">
+              
+            </h4>
+          </div>
+         
+        </section>
+      </div>
+            <div class="col-md-4"></div>
+           
+              <!-- car to be bind dynamically -->
+
+          </div>
+          
+      </div>
+      <div class="container mt-3">
+        <div class="row justify-content-center mt-5" id="underrisk">
+          <h2 style="color: blue; font-size: 25px; font-weight: 600; text-align: center;" >What are the risks of being underweight?</h2>
+          <div class="col-md-12 text-center">
+            <p>Having a BMI below 18.5 is also fraught with health risks, such as the ones listed below:
+            </p>
+          </div>
+          
+          <div class="col-md-6">
+            <img src="./Assets/img/Component11One.svg" alt="img">
+          </div>
+          <div class="col-md-6">
+            
+           <ul>
+            <li>Vitamin deficiencies
+            </li>
+            <li>Anaemia (low red blood cell count and hence reduced capacity to carry oxygen)
+            </li>
+            <li>Diminished immunity or the ability to ward off infections
+            </li>
+            <li>Osteoporosis or brittle bones that break easily
+            </li>
+            <li>Malnutrition</li>
+            <li>Developmental delays in children
+            </li>
+            <li>Hormonal imbalances
+            </li>
+            <li>Disruptions in women's menstrual cycle causing complications in conception
+            </li>
+
+           </ul>
+          </div>
+         
+          <div class="col-md-12 text-center">
+            <p>Being underweight can also be an indication of underlying health conditions like anorexia. Hence, if your BMI calculator shows a value matching the underweight category, you should consult a medical professional.
+
+            </p>
+          </div>
+
+        </div>
+        <div class="row justify-content-center mt-5" id="overrisk">
+          <h2 style="color: red; font-size: 25px; font-weight: 600; text-align: center;" >What are the health risks related to being overweight?
+          </h2>
+          <div class="col-md-12 text-center">
+            <p>HExcess weight brings with it countless health complications, some of which can be fatal. A higher BMI than average (over 25) is associated with increased risks for diseases like:
+            </p>
+          </div>
+          
+          
+          <div class="col-md-6">
+            
+           <ul>
+            <li>Type 2 diabetes
+            </li>
+            <li>Heart conditions
+            </li>
+            <li>High blood pressure
+            </li>
+            <li>Gall bladder-related complications
+            </li>
+            <li>Osteoarthritis or breakdown of joint cartilage leading to painful joints
+            </li>
+            <li>Sleep apnea or intermittent breathing obstruction during sleep
+            </li>
+            <li>Poly-cystic ovarian disease in women leading to reduced fertility and other menstrual irregularities
+            </li>
+            <li>Certain types of cancer (breast, colon, endometrial, gall bladder, kidney, liver)
+            </li>
+
+           </ul>
+          </div>
+          <div class="col-md-6">
+            <img src="./Assets/img/overweight10One.svg" alt="img">
+          </div>
+          
+          <div class="col-md-12 text-center mt-3">
+            <p>In children, body fat content changes with age. It is also normal for teenage girls to have more body fat than boys. BMI calculation for children follows the sameformula as adults. But the value is then plotted on standard gender-specific BMI-for-age percentile charts for children. It determines the child's weight status compared to children of the same gender and age.
+            </p>
+            <p>For example, a 25th percentile BMI for a 6-year old female child would indicate that the child's weight is higher than 25% of girls aged 6.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+  </section>
+
+<footer class="py-5 bg-dark">
+      <div class="container"><p class="m-0 text-center text-white">Copyright &copy; EMK Website 2024</p></div>
+  </footer>
+    
+</body>
+<script>
+  function calculate(){
+    if(weight.value !=='' && height.value!=='' )
+  {
+    // alert(weight.value)
+    Height=height.value;
+    Weight=weight.value;
+    let BMI;
+  heightMeter= Height/100;
+  Meter=heightMeter**2
+  
+  BMI=Weight/Meter;
+  // alert(BMI.toFixed(2))
+
+  bmi.innerHTML=BMI.toFixed(2)
+
+  if(BMI.toFixed(2)<18.5)
+  {
+    ext.innerHTML='<strong style="color: blue;">Underweight</strong>'
+
+  }else if(BMI.toFixed(2)>=18.5 && BMI.toFixed(2)<=24.9){
+
+    ext.innerHTML=' <strong style="color: green;">Healthy Weight</strong>'
+
+  }else if(BMI.toFixed(2)>=25.0 && BMI.toFixed(2)<=29.9){
+
+      ext.innerHTML='<strong style="color: orange;">Overweight</strong>'
+
+      }else if(BMI.toFixed(2)>=30.0)
+    {
+
+      ext.innerHTML='<strong style="color: red;">Obesity</strong>'
+
+    }
+  }
+  
+  else{
+    alert("please enter the feilds")
+  }
+  }
+  function clr(){
+    weight.value='';
+    height.value='';
+    bmi.innerHTML='';
+    ext.innerHTML=''
+
+  }
+
+</script>
+</html>
